@@ -1,33 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   SidebarContainer,
   LogoWrapper,
-  Logo,
-  CommonButton,
   Navigation,
   NavList,
   LoginSection,
 } from "./Sidebar.styles";
 import MenuItem from "./MenuItem";
 import menuItems from "./MenuData";
-// import 공용물품아이콘 from "./공용물품.svg";
+import { useNavigate } from "react-router-dom";
+import logo from '../../assets/lgo.svg';
 
 const Sidebar = () => {
+  const [selectedItem, setSelectedItem] = useState(null);
+  const navigate = useNavigate();
+
+  const handleClick = (id, location) => {
+    setSelectedItem(id);
+    navigate(location);
+  };
+
   return (
     <SidebarContainer>
       <LogoWrapper>
-        <Logo />
+        <img src={logo} alt="Logo" />
       </LogoWrapper>
-
-      <CommonButton>
-        {/* <img src={공용물품아이콘} alt="공용물품" width="20" height="20" /> */}
-        공용물품
-      </CommonButton>
 
       <Navigation>
         <NavList>
           {menuItems.map((item) => (
-            <MenuItem key={item.id} title={item.title} />
+            <MenuItem
+              key={item.id}
+              title={item.title}
+              isSelected={selectedItem === item.id}
+              onClick={() => handleClick(item.id, item.location)}
+            />
           ))}
         </NavList>
       </Navigation>

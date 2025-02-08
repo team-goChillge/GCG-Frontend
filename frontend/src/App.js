@@ -1,10 +1,10 @@
 import React from "react";
-import Share from "./pages/Share";
+import Notice from "./pages/notice.jsx";
 
 function App() {
   return (
     <>
-      <Share />
+      <Notice />
     </>
   );
 }

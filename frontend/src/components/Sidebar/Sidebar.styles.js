@@ -38,12 +38,19 @@ export const CommonButton = styled.button`
     background-color: #fcc419;
   }
 
+  &.selected {
+    background-color: #FDE047;
+    color: #333;
+  }
+
   &:focus,
   &:focus-visible {
+    background-color:#FDE047;
     outline: none;
     box-shadow: none;
   }
 `;
+
 
 export const Navigation = styled.nav`
   padding: 0 1rem;
