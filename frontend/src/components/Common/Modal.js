@@ -35,9 +35,11 @@ const CloseButton = styled.button`
 const ModalList = styled.ul`
   list-style: none;
   padding: 0;
+  text-align: start;
 `;
 
 const ModalItem = styled.li`
+  font-size: 24px;
   border-bottom: 1px solid #000;
   padding: 10px 0;
   margin-bottom: 10px;
@@ -53,13 +55,19 @@ const Modal = ({ isOpen, onClose }) => {
         <p>여기에서 냉장고 사용 기록을 볼 수 있어요.</p>
         <ModalList>
           <ModalItem>
-            2025/02/08 - 10:01:12 차동규님이 냉장고를 열었습니다.
+            2025/02/08 - 10:01:12 차동규님이 냉장고 1를 열었습니다.
           </ModalItem>
           <ModalItem>
-            2025/02/08 - 10:05:30 홍길동님이 냉장고를 닫았습니다.
+            2025/02/08/10/01/12 차동규님이 냉장고에서 핫식스 1개를 꺼냈습니다.
           </ModalItem>
           <ModalItem>
-            2025/02/08 - 10:10:45 이순신님이 냉장고를 열었습니다.
+            2025/02/08 - 10:06:13 차동규님이 냉장고 1를 닫았습니다.
+          </ModalItem>
+          <ModalItem>
+            2025/02/08 - 10:05:30 홍길동님이 냉장고 1를 열었습니다.
+          </ModalItem>
+          <ModalItem>
+            2025/02/08 - 10:10:45 이순신님이 냉장고 1를 열었습니다.
           </ModalItem>
           <ModalItem>
             2025/02/08 - 10:15:20 강감찬님이 냉장고를 닫았습니다.
