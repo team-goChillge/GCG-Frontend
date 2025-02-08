@@ -39,7 +39,7 @@ const Sidebar = () => {
         </NavList>
       </Navigation>
 
-      <LoginSection>로그인</LoginSection>
+      <LoginSection onClick={() => navigate("/share")}>로그인</LoginSection>
     </SidebarContainer>
   );
 };

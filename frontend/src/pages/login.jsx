@@ -19,7 +19,7 @@ function Login() {
             <Input placeholder="아이디를 입력하세요." />
             <Text3 >비밀번호 </Text3>
             <Input placeholder="비밀번호를 입력하세요." type="password"/>
-            <Button>로그인</Button>
+            <Button onClick={() => navigate("/share")}>로그인</Button>
             <Text4 onClick={()=> navigate("/signup")}>회원가입</Text4>
         </Modal>
         </Red>
